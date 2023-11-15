@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!--
+        Kaio Victtor Santos Andrade Galvão e Jéssica Sobral Silva
+        
+        use Usuario;
+        
+        CREATE TABLE Usuario (
+            id INT PRIMARY KEY,
+            nome VARCHAR(255) NOT NULL,
+            status BOOLEAN NOT NULL,
+            ferramenta VARCHAR(255)
+        );
+
+        INSERT INTO Usuario (id, nome, status, ferramenta)
+        VALUES
+            (1, 'Kaio Victtor', 1, 'Power Bi'),
+            (2, 'Ana Silva', 1, 'Excel'),
+            (3, 'Carlos Oliveira', 0, 'Tableau'),
+            (4, 'Maria Santos', 1, 'Powerpoint'),
+            (5, 'Lucas Pereira', 1, 'Python'),
+            (6, 'Isabel Lima', 0, 'R'),
+            (7, 'Rafael Costa', 1, 'SQL Server'),
+            (8, 'Juliana Almeida', 1, 'Google Analytics'),
+            (9, 'Diego Souza', 0, 'QlikView'),
+            (10, 'Camila Rocha', 1, 'Excel'),
+            (11, 'Fernando Oliveira', 1, 'Power Bi'),
+            (12, 'Mariana Cardoso', 0, 'Tableau'),
+            (13, 'Vinícius Santos', 1, 'Python'),
+            (14, 'Carla Lima', 1, 'R'),
+            (15, 'Pedro Oliveira', 1, 'SQL Server'),
+            (16, 'Amanda Costa', 0, 'Google Analytics'),
+            (17, 'Roberto Souza', 1, 'QlikView'),
+            (18, 'Patrícia Rocha', 1, 'Excel'),
+            (19, 'Eduardo Silva', 0, 'Power Bi'),
+            (20, 'Laura Cardoso', 1, 'Tableau'),
+            (21, 'Gustavo Santos', 1, 'Powerpoint'),
+            (22, 'Sofia Oliveira', 1, 'Python'),
+            (23, 'Daniel Lima', 0, 'R'),
+            (24, 'Beatriz Costa', 1, 'SQL Server'),
+            (25, 'Felipe Almeida', 1, 'Google Analytics');
+    -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Quantidade total de usuários</h5>
+                    <p class="card-text" id="numeroTotalUsuarios"></p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Status dos usuários</h5>
+                    <canvas id="graficoStatus" height="400"></canvas>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Ferramentas utilizadas pelos usuários</h5>
+                    <canvas id="graficoFerramentas" height="300"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="dashboard.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</body>
+</html>
